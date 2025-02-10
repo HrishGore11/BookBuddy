@@ -12,6 +12,19 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  env: {
+    CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+    NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET:
+      process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+  },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'res.cloudinary.com',
+        port: '',
+      },
+    ],
+  },
 };
 
 const plugins = [

@@ -14,7 +14,20 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@/*": ["./*"],
+      "@books-management/libs": ["libs/src/index.ts"],
+      "@books-management/libs/server": ["libs/src/server.ts"],
+      "@books-management/shadui-components": [
+        "apps/frontend/ui-components/src/components/ui/index.ts"
+      ],
+      "@books-management/ui-components/components": [
+        "apps/frontend/ui-components/src/components/index.ts"
+      ],
+      "@books-management/ui-components/server": [
+        "apps/frontend/ui-components/src/server.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
